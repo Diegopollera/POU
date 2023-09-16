@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muñequito</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "assets/css/style.css">    
+    </head>
+    <body>
+        <div class="barra_superior">
+            <div class="aa">
+                <span class="bip" class="bb">
+                    <!--le asigno ID al boton del engranaje-->
+                    <button id="abrir_ventana" type="button" onclick="enviar()"><img src="multimedia/engranaje.png" width="25px" height="25px"></button>
+                </span>
+                <span class="bip" class="bb">
+                    <button id="boton_musica" type="button" onclick="musica()"><img src="multimedia/audio.png" width="25px" height="25px"></button>
+                </span>
+            </div>
+        </div>
+        <!--Div de la pagina emergente de ingresar datos-->
+        <div id="DIVmodal" class="ventana_emergente">
+            <div class="estilizado">
+
+                <!-- Contenido -->
+                <h2>Personaliza a tu mascota</h2>
+                <div class="derechab">
+                    <form id = "form1">
+                        <label for="nombre">Nombre:</label> <br>
+                        <input type="text" id="nombre" name="nombre" required><br>
+
+                        <label for="apellido">Apellido:</label> <br>
+                        <input type="text" id="apellido" name="apellido" required><br>
+
+                        <label for="edad">Edad:</label><br>
+                        <input type="text" id="edad" name="edad" required><br>
+
+                        <label for="comida">Comida:</label><br>
+                        <input type="text" id="comida" name="comidad" required><br>
+
+                        <label for="color">Color:</label><br>
+                        <input type="text" id="color" name="color" required><br>
+                        <p></p>
+                        <button type="button" class="pib" onclick="enviar()">Enviar</button><br>
+                    </form>
+                </div>
+                <!-- BOTON DE CERRAR PAGINA CON ID -->
+                <button id="cerrar_ventana" type="button" onclick="mostrar()">Cerrar</button>
+            </div>
+        </div>
+
+        <div class="parent">
+            <div class="centrar">
+                <div class="dysplay_parar" id="gifparar">
+                    <img  src="multimedia/parar.gif" type="gif" width="250" height="250">
+                </div>
+                <div class="dysplay_saludar" id="gifsaludar">
+                    <img  src="multimedia/saludar.gif" type="gif" width="250" height="250">
+                </div>
+                <div class="dysplay_correr" id="gifcorrer">
+                    <img  src="multimedia/correr.gif" type="gif" width="250" height="250">
+                </div>
+                <div class="dysplay_colorear" id="gifcolorear">
+                    <img  src="multimedia/colorear.gif" type="gif" width="250" height="250">
+                </div>
+                <div class="dysplay_dormir" id="gifdormir">
+                    <img  src="multimedia/dormir.gif" type="gif" width="250" height="250">
+                </div>
+                <div class="dysplay_parar" id="gifparar">
+                    <img  src="multimedia/parar.gif" type="gif" width="250" height="250">
+                </div>
+                <div class="dysplay_comer" id="gifcomer">
+                    <img  src="multimedia/comer.gif" type="gif" width="250" height="250">
+                </div>
+            </div>
+
+            <div class="barra"> 
+                <p><strong><h1> </h1></strong>
+                    <span id="nombreMostrado" class="texto_nombre"></span>
+                </p> <br>
+            </div>
+
+            <div id="datos" class="mostrar_datos">
+                <p><strong>Apellido:</strong> <span id="apellidoMostrado"></span></p> <br>
+                <p><strong>Edad:</strong> <span id="edadMostrado"></span></p> <br>
+                <p><strong>Comida Favorita:</strong> <span id="comidaMostrado"></span></p> <br>
+                <p><strong>Color Favorito:</strong> <span id="colorMostrado"></span></p> <br>
+                
+            </div>
+
+            <div class="botones">
+                <h2>Acciones:</h2>
+                <button type="button" class="boton" onclick="saludar()">Saludar</button>
+                <button type="button" class="boton" onclick="correr()">Correr</button>
+                <button type="button" class="boton" onclick="comer()">Comer</button> 
+                <button type="button" class="boton" onclick="colorear()">Colorear</button>
+                <button type="button" class="boton" onclick="dormir()">Dormir</button>
+                <button type="button" class="boton" onclick="parar()">Parar</button>
+            </div>
+                    <!--Carga-->
+            <div class="barra_inferior">
+                <div class="centrar">
+                        <img id="foto1" src="multimedia/carga_0_.png" width="120" height="80">
+                        <img id="foto2" src="multimedia/carga_20_.png" width="120" height="80">
+                        <img id="foto3" src="multimedia/carga_40_.png" width="120" height="80">
+                        <img id="foto4" src="multimedia/carga_60_.png" width="120" height="80">
+                        <img id="foto5" src="multimedia/carga_80_.png" width="120" height="80">
+                <div>
+                <span id="Energia"></span>
+            </div> 
+            <div class="musica">
+                <audio id="musica" src="multimedia/Taylor Swift - The Man (1 Hour Loop).mp3" controls></audio>
+            </div>
+        <script src="script.js"></script>
+    </body>
+
+
+</html> 
